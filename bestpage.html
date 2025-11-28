@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<style>
+body {
+background: url(diddy.jpg) center left 61px/97px;
+animation: diddy 8s infinite linear;
+
+
+
+}
+
+#sixswan {
+    animation: diddy2 8s infinite linear;
+    animation-delay: 2.66666667s;
+    width: 550px;
+    height: 800px;
+    left: 0px;
+    font-size: 40px;
+}
+
+
+@keyframes diddy {
+    0% {background: url(diddy.jpg)  center bottom right 670px/61px;}
+    33% {background: url(images.jpg)  top right 856px/190px;}
+    67% {background: url(download.jpg)  right top 277px/61px;}
+    100% {background: url(diddy.jpg)  center bottom right 670px/61px;}
+}
+
+@keyframes diddy2 {
+    0% { background-image: url(diddy.jpg); transform: rotateY(0deg) translateX(500%); }
+    33% {background-image: url(images.jpg); transform: rotateY(180deg) translateX(-500%); }
+    67% {background-image: url(download.jpg); transform: rotateY(270deg) translateX(500%); }
+    100% {background-image: url(diddy.jpg); transform: rotateY(360deg) translateX(-500%);}
+}
+
+</style>
+
+
+<body>
+
+<div id="sixswan"><a href="index.html">six swan</a></div>
+
+</body>
+</html>
