@@ -20,7 +20,21 @@
     and last hit applies the velocity to the last person you hit in a certain timeframe so last hit 1 would be to the person you last hit a in a second same goes for all last hits and ragdoll applies ragdoll for a certain amount of time and it applies to you if you don't have last hit on.
     also stuff like 15 is really low if you want someone to be actually moved it should be more like 30 and 60 for dashes and such with 1.2 time duration <br>
     
+    --VISUAL NODE-- <br>
 
+    You have to select a limb where the effect appears and the effect will copy the CFRAME of that limb with the rotation and position using 3D coordinates xyz to manipulate that effect around that and 
+    the center point of the effect appears at the center point of the limb you selected so be mindful of that, there are many different visual effects you need to search up on google or the 
+    jujutsu shenanigans wiki page and some things aren't mentioned on the wiki so you'll have to find those from tutorials for skill builder and it is heavily encouraged to use glow + last hit and make the
+    size for the glow 0.95 for hit confirmation and alt opacity 1 <br>
+
+    --PARTICLE EMITTER NODES-- <BR>
+    Just read the roblox documentation for it and that'll tell you everything you need to know. <br>
+
+     --HITBOX NODES-- <br>
+
+    This is the main way of interacting with the enviorment and your opponent, there is a debris setting that when over 0 destroys the enviroment and should usually be set to size 2 to avoid lag from multiple
+    small parts, the damage does what you expect it to, the stun should always cover the amount of time between 2 hitbox nodes or until the skill ends and the user is out of stun and this is also your main way of
+    getting your opponent into branches or the user <br>
     
     
     !!Moves cannot be on anything but numerical keys and the special is the r key chase is a front dash on the q key and the skill builder is caps sensitive!! <Br>
