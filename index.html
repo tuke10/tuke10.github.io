@@ -1,8 +1,13 @@
 <body>
     Jujutsu shenanigans skill building instructions <br>
      !!CAREFULLY READ EVERYTHING!!
-
-
+    A good Moveset contains: <br>
+    -Animations <br>
+    -Visual effects, prefferably from the particle emitter than the built in visuals node <br>
+    -Hitboxes <br>
+    -velocity for ragdolls and responsiveness <br>
+    -visual confirmation with the visual blocks glow effect, make sure it's set on the humanoidrootpart so that the whole body gets affected and make sure it fades out with alt opacity <br>
+    
     
     !!Moves cannot be on anything but numerical keys and the special is the r key chase is a front dash on the q key and the skill builder is caps sensitive!! <Br>
 
@@ -16,6 +21,8 @@
     https://jujutsu-shenanigans.fandom.com/wiki/Build_Mode/Skill_Builder#Properties <br>
     https://ossaamm.github.io/ <br>    
     https://www.youtube.com/watch?v=8GijciCK9r8&utm.com <br>   
+    !!GO READ DOCUMENTATION ON THE ROBLOX PARTICLE EMITTERS AND LOOK FOR TUTORIALS ON THEM ASWELL FOR BETTER VISUAL EFFECTS AND ALSO LOOK FOR JJS SKILL BUILDER TUTORIALS!!
+    !!LEARN TO SPLICE ANIMATIONS TOGETHER WITH FADE IN/OUT FOR SMOOTHER LOOKING ANIMATIONS!!
     The effect always appears at the center of the selected limb so when doing an effect say on an arm and you want it to be infront of the fist always do -2 on the y axis or if you want something to appear infront do it on the humanoidrootpart and +2 on the z axis because the effect has the same coordinate frame as the limb you put the effect on <br>
     Make sure the node identifier you wrote is named the exact same as the nodes true identifier or else the whole thing won't work <br>
     Make sure to not miss any skill properties like tools tips, data, name ect or else the whole thing breaks again <br>
@@ -39,6 +46,8 @@
     swing sound 2 - 140527314975641 <br>  
     slam sound - 97522871949213 <br>  
     
+    !!REMEMBER TO ADD SIZE VARIANCE (MULTIPLIER) FOR THE PARTICLES ASWELL AS ROTATION, ROTATION SPEED AND ECT DO NOT MAKE IT A SINGLE STATIC NUMBER!!
+    
     Branches are essential for conditionals on moves, try learn them and only use them once you 100% know and understand them <br>   
     
     The preview[1, 10] on the anim nodes is the length of the animations by the way so when you do "USE_ANIM": [Whatever indices you use from below] and look at the timestamps they go to the preview table<br>   
@@ -50,10 +59,12 @@
     
     Jujutsu shenanigans animation indexes <br>
 
- !!All animations use the string "USE_ANIM": [character the animation is from as a numeral from oldest to newest,index number from the list of animations] unless it is different in the template!! <br>
+ !!All animations use the string "USE_ANIM": [character the animation is from as a numeral from oldest to newest,index number from the list of animations] and the preview part defines how long the animation goes for, for example PREVIEW[3.95, 5.36] for fever breaker axe kick!! <br>
 !!IF THE MOVE ENDS BEFORE THE ANIMATION THE ANIMATION WILL ALSO GET CANCELLED WITHOUT FADEOUT!!<br>   
  !!Hit usually references the person you have hit not as in an if statement on if you hit the move!! <br>
- 
+ !!THE EMPTY TIME BETWEEN PARTS OF THE ANIMATION IS THE ANIMATION BEFORE THAT JUST FROZEN FOR EXAMPLE DURING RAPID PUNCHES 1.14-1.49 IS JUST THE FINAL FRAME OF THE SPIN KICK FROZEN!!
+
+    
  GOJO <br>
 
  rapid punches [1, 5] initial spin kick lasts 1.14 seconds barrage starts at 1.49 ends at 5.04 has about 41 hits finisher starts at 6 ends at 6.69 and is one singular punch <br>
