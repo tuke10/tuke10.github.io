@@ -15,10 +15,22 @@
 
     --VELOCITY NODE-- <br>
 
-    Applies velocity into any direction you want with presumably the formula hrp * cframe.new(Your 3d coordinate input) unless track is on where instead of the hrp it uses the torsos orientation for a direction
-    I also assume it uses assemblylinearvelocity and for time it just tells how long it'll apply the velocity for and fade divides it until it's near 0 for the duration of the velocity which should not be used most of the time
-    and last hit applies the velocity to the last person you hit in a certain timeframe so last hit 1 would be to the person you last hit a in a second same goes for all last hits and ragdoll applies ragdoll for a certain amount of time and it applies to you if you don't have last hit on.
-    also stuff like 15 is really low if you want someone to be actually moved it should be more like 30 and 60 for dashes and such with 1.2 time duration <br>
+    Referred to as VELO in the json <br>
+
+    -properties- <br>
+
+    Force - the direction force should be applied towards. Higher number = bigger push (x,y,z) <br>
+    Time - how long the force should be active for (value) <br>
+    Fade - The force linearly fades to 0,0,0 over time (boolean) <br>
+    Track - force direction tracks the torsos orientation for the duration of the node (boolean) <br>
+    last hit - applies the velocity to whoever was hit in the last (value) seconds <br>
+    ragdoll - ragdolls whoever the node is affected by for (value) seconds <br>
+    True ragdoll - disables ragdoll cancel (boolean) <br>
+    relative from branch - force direction is relative to the branch origin. (boolean) <br>
+    -Uses and tips and tricks- <br>
+    Use this for whenever you hit someone for feedback and for lunging or front dashes (track, fade, time 0.9 and z = 40-60), the time matters more than the force so keep force above 20 on all axises mostly
+    and time low for it to be punchy and keep fade off for short bursts and track stays off too unless you want them to turn during the velocity and use relative from branch on victim branches with velocity 
+    if you want the opponent to move relative to the player <br>
     
     --VISUAL NODE-- <br>
 
