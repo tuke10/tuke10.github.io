@@ -25,10 +25,11 @@
     You have to select a limb where the effect appears and the effect will copy the CFRAME of that limb with the rotation and position using 3D coordinates xyz to manipulate that effect around that and 
     the center point of the effect appears at the center point of the limb you selected so be mindful of that, there are many different visual effects you need to search up on google or the 
     jujutsu shenanigans wiki page and some things aren't mentioned on the wiki so you'll have to find those from tutorials for skill builder and it is heavily encouraged to use glow + last hit and make the
-    size for the glow 0.95 for hit confirmation and alt opacity 1 <br>
+    size for the glow 0.95 for hit confirmation and alt opacity 1 this node also includes camera shakes at 3 different levels along with screen color effects and a dedicated camera effect which lets you
+    move the camera aswell as afterimages, for more google the whole list. <br>
 
     --PARTICLE EMITTER NODES-- <BR>
-    Just read the roblox documentation for it and that'll tell you everything you need to know. <br>
+    Your visual effects should primarily consist of these, just read the roblox documentation for it and that'll tell you everything you need to know. <br>
 
      --HITBOX NODES-- <br>
 
@@ -37,6 +38,10 @@
     getting your opponent into branches or the user and the size and position property both use xyz 3D coordinates to manipulate the size of the hitbox and what the position of the center of the hitbox is 
     relative to the players humanoidrootpart <br>
     
+    --STATE NODES-- <br>
+    Very essential, this is required to give the move user stun and disable running and ect, cancel on end should almost always be turned on unless this is meant to be used as a debuff
+    and if it's off it'll go off the time set for the move and the value is for certain state block statuses and doesn't affect the essentials it also features a last hit <br>
+
     
     !!Moves cannot be on anything but numerical keys and the special is the r key chase is a front dash on the q key and the skill builder is caps sensitive!! <Br>
 
@@ -63,9 +68,10 @@
     
     Assets for skillbuilding<br>   
 <br>   
-    8x8 Dust/Smoke flipbook particle effect - 11355872735 <br>   
+    8x8 Dust/Smoke flipbook particle effect - 11355872735 <br>  
+    8x8 dust/smoke flipbook particle 2 - 15222191191 <br>
     4x4 Crescent slash flipbook particle effect - 16940401365 <br>   
-    8x8 Blood splash flipbook particle effect - 78212889625561 <br>   
+    8x8 Blood splash hit flipbook particle effect - 78212889625561 <br>   
     5x5 rock shrapnel debree flipbook particle effect - 139488083773712 <br>   
     Explosion sound - 120212342534790 <br>  
     punch sound 1 - 110024396934410 <br>  
@@ -74,6 +80,11 @@
     Swing sound 1 - 93854325647161 <br>  
     swing sound 2 - 140527314975641 <br>  
     slam sound - 97522871949213 <br>  
+    8x8 Cursed energy flipbook particle effect (recolorable) - 16708557658
+    4x4 fire flipbook particle effect (recolorable) - 16924860127
+    4x4 fire flipbook particle effect 2 (recolorable) - 86644934246125
+    8x8 lightning flipbook particle effect 2 (recolorable) - 82863579102234
+    4x4 lightning flipbook particle effect (recolorable) - 14367406033
     
     !!REMEMBER TO ADD SIZE VARIANCE (MULTIPLIER) FOR THE PARTICLES ASWELL AS ROTATION, ROTATION SPEED AND ECT DO NOT MAKE IT A SINGLE STATIC NUMBER!!
     
