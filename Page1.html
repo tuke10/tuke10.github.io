@@ -2,14 +2,14 @@
 
 <a href="index.html"> instructions page</a> <br>
 
-  ### JJS Moveset Creation Guidelines
+  ### JJS Moveset Creation Guidelines <br>
 
-- Set `LastHit` to `0.01` immediately after the corresponding Hitbox node fires. This prevents lingering hit registration from affecting unrelated attacks.
-- visuals attached to limbs must be positioned else they will have the Coordinate frames of the limb
-- Visual positioning uses `Limb.CFrame * YourPositionSettings`, applying offsets relative to the selected limb's CFrame.
-- Account for the typical 1–1.5 stud downward offset from the default limb spawn position when positioning fist visuals.
-- Visual offsets for individual animations are unnecessary when effects are attached to limbs, since they follow the limb's CFrame. Manual animation-specific positioning is relevant when attaching effects to the HumanoidRootPart.
-- Preserve the website's exact JSON structure, node identifiers, property names and import encoding format.
-- Always compare generated moveset JSON against the website's template before providing import codes.
+- Set `LastHit` to `0.01` immediately after the corresponding Hitbox node fires. This prevents lingering hit registration from affecting unrelated attacks. <br>
+- visuals attached to limbs must be positioned else they will have the Coordinate frames of the limb <br>
+- Visual positioning uses `Limb.CFrame * YourPositionSettings`, applying offsets relative to the selected limb's CFrame. This does not however affect these visual effects: afterimage, afterimage 2, glow and meele trail. <br>
+- Account for the typical 1–1.5 stud downward offset from the default limb spawn position when positioning fist visuals. <br>
+- Visual offsets for individual animations are unnecessary when effects are attached to limbs, since they follow the limb's CFrame. Manual animation-specific positioning is relevant when attaching effects to the HumanoidRootPart. <br>
+- Preserve the website's exact JSON structure, node identifiers, property names and import encoding format. <br>
+- Always compare generated moveset JSON against the website's template before providing import codes. <br>
 
 </body>
