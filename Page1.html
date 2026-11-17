@@ -11,5 +11,16 @@
 - Visual offsets for individual animations are unnecessary when effects are attached to limbs, since they follow the limb's CFrame. Manual animation-specific positioning is relevant when attaching effects to the HumanoidRootPart. <br>
 - Preserve the website's exact JSON structure, node identifiers, property names and import encoding format. <br>
 - Always compare generated moveset JSON against the website's template before providing import codes. <br>
+  
+  ### JJS Animation Splicing Guidelines <br>
+
+- Splice useful middle/action sections of animations rather than unnecessary neutral poses, windups or recovery frames. <br>
+- Choose compatible poses between animation segments to prevent unnatural snapping. <br>
+- `Fade In` determines how long an animation takes to interpolate, not how long it waits before starting. <br>
+- Fade In/Out is optional and should only be used when it improves the transition. <br>
+- **Known bug:** Fade In/Out does not work between spliced sections of the same animation. Use hard cuts instead. <br>
+- When blending different animations, ensure sufficient overlap for interpolation to complete. <br>
+- Synchronize hitboxes and visual effects with the actual attack frames after splicing. <br>
+- Prioritize smooth, natural-looking attacks over excessive interpolation or animation segments. <br>
 
 </body>
