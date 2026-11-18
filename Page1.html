@@ -35,5 +35,17 @@
 - If imports fail, check compression and node structures before blaming awakening logic. <br>
 - **Note:** Other changes were made in the successful version, so compression was not confirmed as the sole cause. <br>
 
+
+  ### JJS Awakening Moveset Guidelines <br>
+
+- Awakening movesets require an `AWAKENING` block with valid `DATA` and `DURATION` properties. <br>
+- Use `AWK: true` for base skills and `AWK2: true` for awakening-only skills. <br>
+- Awakening skills should replace their corresponding base skills when awakening activates. <br>
+- Keep base and awakening skills in separate skill blocks with valid node structures. <br>
+- Awakening animations, particles, buffs, and effects can be added to the awakening timeline. <br>
+- Set `DURATION` to control how long the awakening lasts. <br>
+- Ensure awakening skills and effects use supported properties and valid timing. <br>
+- **Important:** A failed awakening import does not necessarily mean the awakening structure is incorrect; check encoding and compression too. <br>
+
   
 </body>
