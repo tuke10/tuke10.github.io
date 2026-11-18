@@ -23,4 +23,17 @@
 - Synchronize hitboxes and visual effects with the actual attack frames after splicing. <br>
 - Prioritize smooth, natural-looking attacks over excessive interpolation or animation segments. <br>
 
+  ### JJS Import Code Compatibility Guidelines <br>
+
+- JJS imports use Base64-encoded Zstandard-compressed JSON. <br>
+- Match the compression format of a known working JJS export. <br>
+- **Confirmed working format:** Zstandard frame descriptor `0x60`, with uncompressed content size included and checksum disabled. <br>
+- **Known issue:** Codes using frame descriptor `0x04` failed despite successfully decoding and decompressing. <br>
+- Valid JSON and successful decompression do not guarantee a working import. <br>
+- Test a simple skill before importing complex movesets or awakenings. <br>
+- Use `AWK` for base skills and `AWK2` for awakening skills. <br>
+- If imports fail, check compression and node structures before blaming awakening logic. <br>
+- **Note:** Other changes were made in the successful version, so compression was not confirmed as the sole cause. <br>
+
+  
 </body>
