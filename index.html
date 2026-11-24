@@ -51,11 +51,35 @@
     
     --VISUAL NODE-- <br>
 
-    You have to select a limb where the effect appears and the effect will copy the CFRAME of that limb with the rotation and position using 3D coordinates xyz to manipulate that effect around that and 
-    the center point of the effect appears at the center point of the limb you selected so be mindful of that, there are many different visual effects you need to search up on google or the 
-    jujutsu shenanigans wiki page and some things aren't mentioned on the wiki so you'll have to find those from tutorials for skill builder and it is heavily encouraged to use glow + making hit effect branch where you will put the glow and use branch target on the hitbox and make the
-    size for the glow 0.95 for hit confirmation and alt opacity 1 this node also includes camera shakes at 3 different levels along with screen color effects and a dedicated camera effect which lets you
-    move the camera aswell as afterimages, for more google the whole list. <br>
+    Offers a wide array of visual effects that will preview on the user when clicked: Cancel, Overlay, Shake Light, Clash, Melee Trail, Beams, Wind Streak, Star, Mesh, Light, Billboard, Wind Expand, 360 Wind, Whirl Slash, Camera, Beam, Circle Glow, Flames, Distortion, Star Outline, Afterimage2, Field Of View, Cylinder, Black Flash, Energy Sparks, Cleave, Blood, Block, Ring, Burst, Sparks, Mass Hit, Wedge, Shake Heavy, Slash, Cursed Energy, Dismantle, Rough Energy, Screen Color, Sphere, Weak Lightning, Wind Ring, Shine, Shake Medium, Visibility, Glow. <br>
+    Amount - amount of effects to emit. if the selected effect is mesh the value of this property becomes the mesh ID <br>
+    Texture - the effects texture determined by an assetID <br>
+    Color - The effects color (R, G, B) <br>
+    Alt color - the color to fade into over the course of the effects duration <br>
+    Opacity - the effects transparency <br>
+    alt opacity - the transparency to fade into <br>
+    Position - the effects offset from the selected limb (x, y, z) <br>
+    Alt position - the offset to fade into (x, y, z) <br>
+    Rotation - the Effects rotation (x, y, z) <br>
+    Alt rotation - the rotation to fade into (x, y, z) <br>
+    Size - multiplier of the effects size <br>
+    alt size - the size multiplier to fade into <br>
+    Time - how long the effect should be active for. alt (property) use time as the speed. <br>
+    last hit - activates this node on the target hit in the last (value) seconds. <br>
+    Limb - You can pick an r6 limb <br>
+    Visual tag - the name of the tag. used by other visual nodes to cancel the effect if the selected effect is cancel. <br>
+    Projectile tag - The name of a projectile's tag. if matched with an existing projectiles tag the effects origin is set to the projectiles position. <br>
+    Run on server - Runs on serverside, without it it runs through firing all clients through remote events. (boolean) <br>
+    client sided - Skips firing other clients for the effect running it only on the targets client. (boolean) <br>
+    Cancel on interrupt - cancels the effect when the user gets interrupted requires visual tag. (boolean) <br>
+    Relative from branch - body part is selected from the branch origin (boolean) <br>
+    Can collide - enables collision on the effect making it tangible (boolean) <br>
+    Easing style - Linear, sine, quad, cubic, exponential and back. affects alt (property or properties) <br>
+    Easing direction - in, out, inout affects easing styles <br>
+    Size 2 - Uniform sizing with vector 3, only affects mesh and part related effects (x, y, z)
+    Alt size 2 - what uniform size to fade into <br>
+    
+    
 
     --PARTICLE EMITTER NODES-- <BR>
     Your visual effects should primarily consist of these, just read the roblox documentation for it and that'll tell you everything you need to know. And do note for recolorable effects do not use spaces for the color3 just put it in this format: 125,125,125 no spaces <br>
