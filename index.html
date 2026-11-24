@@ -23,7 +23,7 @@
 
 
     --HOW MOVES FUNCTION IN GENERAL-- <br>
-    Moves do not automatically stun you so you need to manually apply it from the state block 
+    Moves do not automatically stun you so you need to manually apply it from the state block <br>
 
     
 
@@ -62,10 +62,30 @@
 
      --HITBOX NODES-- <br>
 
-    This is the main way of interacting with the enviorment and your opponent, there is a debris setting that when over 0 destroys the enviroment and should usually be set to size 2 to avoid lag from multiple
-    small parts, the damage does what you expect it to, the stun should always cover the amount of time between 2 hitbox nodes or until the skill ends and the user is out of stun and this is also your main way of
-    getting your opponent into branches or the user and the size and position property both use xyz 3D coordinates to manipulate the size of the hitbox and what the position of the center of the hitbox is 
-    relative to the players humanoidrootpart <br>
+        Position - The hitbox's position, the origin being the player's center (x, y, z) <br>
+        Rotation - the hitbox's rotation, relative to the player's orientation (x, y, z) <br>
+        Size - the size of the hitbox (x, y, z) <br>
+        Stun - how long the stun on hit should last for, in seconds (-1 for no stun but still mark as LAST HIT) <br>
+        Stun anim - plays a generic stun animation on the hit target (boolean) <br>
+        Ignore wakeup - Ignore the wakeup stun immunity (boolean, disable for accurate m1s) <br>
+        Damage - how much damage should be dealt on hit <br>
+        Debree - If not 0, causes destruction. the value determines debree fidelity which is 2 by default. Negative values don't spawn debree. <br>
+        Attack type - used for counters to check if they can counter this type of attack (Either Melee, Bullet, Explosion, Swarm or Domain) <br>
+        Blockable - the hitbox is blockable from the front (boolean) <br>
+        360 block - the hitbox is blockable regardless of orientation (boolean) <br>
+        Cancel enemy - cancels the hit target(s) (boolean) <br>
+        Clear knockback - clears hit target(s) velocity also cancelling their ragdoll. (boolean) <br>
+        Can kill - Hitbox can kill targets. if disabled the target(s) cannot receive more damage than their health. (boolean) <br>
+        Hit ragdoll - The hitbox can hit ragdolls (boolean) <br>
+        Hit user - the hitbox can hit the user (boolean) <br>
+        Single target - the hitbox can only hit one target <br>
+        Branch - proceed to a branch on hit <br>
+        Branch target - forces the hit target(s) to proceed to a branch <br>
+        Branch finisher - proceed to a branch if the hit was fatal <br>
+        projectile tag - The name of a projectile's tag. if matched with an existing projectiles tag the hitboxes origin is set to the projectiles position. <br>
+        Link user - turns the hitbox into a hurtbox for a set amount of time in seconds <br>
+        
+        
     
     --STATE NODES-- <br>
     Very essential, this is required to give the move user stun and disable running and ect, cancel on end should almost always be turned on unless this is meant to be used as a debuff
