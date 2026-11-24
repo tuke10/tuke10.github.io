@@ -80,12 +80,50 @@
     Alt size 2 - what uniform size to fade into <br>
 
 
-    Field of view uses amount to adjust it and positive numbers increase it and negative numbers decrease it and the normal Fov value is 1 <br>
+    Field of view uses amount to adjust it and positive numbers increase it and negative numbers decrease it so if you put 35 amount on fov it's the base fov + your input and the normal Fov value input is 1 to return it to normal <br>
     
     
 
     --PARTICLE EMITTER NODES-- <BR>
-    Your visual effects should primarily consist of these, just read the roblox documentation for it and that'll tell you everything you need to know. And do note for recolorable effects do not use spaces for the color3 just put it in this format: 125,125,125 no spaces <br>
+    Projectile tag - The name of a projectile's tag. if matched with an existing projectiles tag the effects origin is set to the projectiles position. <br>
+   last hit - activates this node on the target hit in the last (value) seconds. <br>
+    Part size - keep at 0,0,0 to use attatchments otherwise creates a part with the inputted size and and spawns particles inside of that (x, y, z) <br>
+    Texture - the effect's texture. determined by an AssetID <br>
+    Emit count - amount of particles to spawn at once (duration must be 0) <br>
+    duration - Seconds the emittor stays enabled <br>
+    rate - particles per second only works if duration is more than 0 <br>
+    color - colorsequence, colors separated by spaces (r,g,b r,g,b r,g,b) <br>
+    size - numbersequence, numbers separated by spaces (sizemultiplier1, sizemultiplier2, sizemultiplier3) <br>
+    brightness - particle brightness (number) <br>
+    transparency - numbersequence same as size <br>
+    squash - numbersequence same as size <br>
+    lifetime - how long particles stay alive in seconds (min, max) <br>
+    speed - particle speed (min, max) <br>
+    rotation - starting rotation of particle (min, max) <br>
+    rot speed - rotation speed (min, max) <br>
+    acceleration - acceleration of particle in world space (x, y, z) <br>
+    drag - particle slowdown over time (number) <br>
+    light emission - how much the particle glows (0-1) <br>
+    light influence - how much light influences the particle (0-1) <br>
+    zoffset - depth offset from the camera on particles <br>
+    spread angle - particle spread direction (x, y, z) <br>
+    position - the effects offset from the selected limb (x, y, z) <br>
+    lock to part - particles move with the limb instead of staying where they originally spawned <br>
+    Limb - select a r6 limb to attatch or spawn particles to <br>
+    orientation type - How particles should be facing, you can select: FacingCamera, FacingCameraWorldUp, VelocityParallel and VelocityPerpendicular <br>
+    Emission direction - top to bottom and left right and front and back <br>
+    Flipbook size - size of the flipbook grid (0,0 to disable) <br>
+    Flipbook mode - choose either random, one shot, loop or pingpong <br>
+    flipbook framerate - framerate of the flipbook only applies if flipbook mode is set to loop (min, max) <br>
+    Emitter shape - Box, Sphere, Cylinder, Disc only applies if part size is not 0,0,0 <br>
+    Emitter shape inout - Outward, Inward, InAndOut <br>
+    ShapePartial - do not know <br>
+    Runonserver - boolean <br>
+    ClientSided - boolean <br>
+    Canceltag - name <br>
+    Cancel - Cancel all emitters with the same tag <br>
+    Cancel On interruption - Cancel all emitters with the same tag on interruption <br>
+            
 
      --HITBOX NODES-- <br>
 
